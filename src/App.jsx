@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Typography, Button } from '@mui/material'
 import { useColorScheme } from '@mui/material/styles'
+import CustomCarousel from './components/NavBa/CustomCarrusel/CustomCarrusel'
 import ResponsiveAppBar from './components/NavBa/Navbar'
 
 function App() {
@@ -27,6 +28,7 @@ function App() {
       <Button variant='contained' onClick={toggleMode}>
         Cambiar a {mode === 'light' ? 'Modo Oscuro' : 'Modo Claro'}
       </Button>
+      <CustomCarousel />
       <Typography variant='h2' gutterBottom>
         Sección 1
       </Typography>
