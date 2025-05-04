@@ -16,12 +16,16 @@ function App() {
   }
   return (
     <Container
+      maxWidth='xl'
       sx={{
         height: '100vh', // Altura de la ventana
         overflowY: 'scroll', // Habilita el desplazamiento vertical
         scrollBehavior: 'smooth', // Desplazamiento suave
         bgcolor: 'background.default', // Color de fondo del tema
-        color: 'text.primary' // Color del texto del tema
+        color: 'text.primary', // Color del texto del tema
+        '&::-webkit-scrollbar': { display: 'none' }, // Oculta la barra de desplazamiento en navegadores basados en WebKit
+        '-ms-overflow-style': 'none', // Oculta la barra de desplazamiento en IE y Edge
+        'scrollbar-width': 'none' // Oculta la barra de desplazamiento en Firefox
       }}
     >
       <ResponsiveAppBar />
