@@ -1,6 +1,7 @@
 import React from 'react'
 import { Container, Typography, Button } from '@mui/material'
 import { useColorScheme } from '@mui/material/styles'
+import ResponsiveAppBar from './components/NavBa/Navbar'
 
 function App() {
   const { mode, setMode } = useColorScheme()
@@ -19,10 +20,10 @@ function App() {
         overflowY: 'scroll', // Habilita el desplazamiento vertical
         scrollBehavior: 'smooth', // Desplazamiento suave
         bgcolor: 'background.default', // Color de fondo del tema
-        color: 'text.primary', // Color del texto del tema
-        p: 2 // Padding
+        color: 'text.primary' // Color del texto del tema
       }}
     >
+      <ResponsiveAppBar />
       <Button variant='contained' onClick={toggleMode}>
         Cambiar a {mode === 'light' ? 'Modo Oscuro' : 'Modo Claro'}
       </Button>
